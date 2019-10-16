@@ -5,6 +5,10 @@ class ProductService
   attrs_for_show :sku, :description
   attrs_for_form :sku, :description
 
+  def resources_relation
+    super.includes(:brand, :variants)
+  end
+
   def per_page
     50
   end
