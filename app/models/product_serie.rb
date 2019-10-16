@@ -1,5 +1,5 @@
 class ProductSerie < ApplicationRecord
 
-  belongs_to :variant
+  belongs_to :variant, counter_cache: true
 
 end
