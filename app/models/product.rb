@@ -5,7 +5,7 @@ class Product < ApplicationRecord
     delegate :name, to: :brand, prefix:true
     
     def product_stocks
-        items = variants.map do |variant|
+        items = variants.order(:name).map do |variant|
             "<li> #{variant.name}: #{variant.product_series_count} </li>"
         end
 
