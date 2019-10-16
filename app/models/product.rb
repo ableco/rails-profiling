@@ -6,7 +6,7 @@ class Product < ApplicationRecord
     
     def product_stocks
         items = variants.map do |variant|
-            "<li> #{variant.name}: #{variant.product_serie.count} </li>"
+            "<li> #{variant.name}: #{variant.product_series_count} </li>"
         end
 
         "<ul> #{items.join("")} </ul>".html_safe
