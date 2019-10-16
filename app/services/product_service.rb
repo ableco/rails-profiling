@@ -6,7 +6,7 @@ class ProductService
   attrs_for_form :sku, :description
 
   def resources_relation
-    super.includes(:brand, :variants)
+    super.includes(:brand, :ordered_variants)
   end
 
   def per_page
